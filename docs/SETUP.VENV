@@ -1,0 +1,19 @@
+/juno/bic/work/socci/opt/common/CentOS_7/python/python-3.10.2/bin/python3 -m venv ve.cortana
+. ve.cortana/bin/activate
+pip install --upgrade pip
+
+pip install protobuf==3.20.*
+pip install numpy==1.*
+pip install ipython
+pip install imagecodecs
+
+pip install tensorflow==2.8.0
+pip install matplotlib
+
+module load cuda/11.3
+module load cudnn/8.1.0-cuda11.2 
+
+pip install deepcell
+
+#https://github.com/vanvalenlab/deepcell-applications.git
+

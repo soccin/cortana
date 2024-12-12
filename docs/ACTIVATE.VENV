@@ -1,0 +1,4 @@
+. ve.cortana/bin/activate
+
+module load cuda/11.3
+module load cudnn/8.1.0-cuda11.2 
