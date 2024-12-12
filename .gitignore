@@ -1,2 +1,4 @@
 ve.cortana
+.venv
 ._*
+*.pyc
