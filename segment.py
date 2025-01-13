@@ -6,6 +6,12 @@ from skimage.io import imread
 import os
 import sys
 
+def write_sparse_array(data,outFile):
+    rows, cols = np.nonzero(data)
+    values = data[rows, cols]
+    sparse_data = np.column_stack((rows, cols, values))
+    np.savetxt(outFile,sparse_data,delimiter=",",fmt="%d")
+
 def main(argv):
     app = Mesmer()
 
@@ -77,11 +83,11 @@ def main(argv):
     fig.savefig(outOutputImage)
 
     swc=segmentation_predictions_wc[0,...,0]
-    np.savetxt(outSegMaskBase+"_wc_seg.csv",swc,delimiter=",",fmt="%d")
+    write_sparse_array(swc,outSegMaskBase+"_wc_seg.csv")
     print(",".join(map(str,["NumCells Whole-Cells",sampleId,FOV,np.max(swc)])))
 
     snuc=segmentation_predictions_nuc[0,...,0]
-    np.savetxt(outSegMaskBase+"_nuc_seg.csv",snuc,delimiter=",",fmt="%d")
+    write_sparse_array(snuc,outSegMaskBase+"_nuc_seg.csv")
     print(",".join(map(str,["NumCells Nuclear",sampleId,FOV,np.max(snuc)])))
 
 
