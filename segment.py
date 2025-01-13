@@ -30,7 +30,7 @@ def main(argv):
     X = np.stack((im1, im2), axis=-1)
     X = np.expand_dims(X,0)
 
-    rgb_images = create_rgb_image(X, channel_colors=['green', 'blue'])
+    rgb_images = create_rgb_image(X, channel_colors=['green', 'red'])
     fig, ax = plt.subplots(1, 3, figsize=(15, 5))
     ax[0].imshow(X[0, ..., 0], cmap='Greys_r')
     ax[1].imshow(X[0, ..., 1], cmap='Greys_r')
