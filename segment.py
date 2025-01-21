@@ -92,4 +92,11 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    #
+    # Check for DeepCell Token
+    #
+    if "DEEPCELL_ACCESS_TOKEN" in os.environ:
+        main(sys.argv)
+    else:
+        raise KeyError("Missing DEEPCELL_ACCESS_TOKEN in Environ")
+
