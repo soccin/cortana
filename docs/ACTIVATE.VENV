@@ -1,4 +1,8 @@
 . ve.cortana/bin/activate
 
-module load cuda/11.3
-module load cudnn/8.1.0-cuda11.2 
+#
+# GPU's on JUNO do not seem to work (crash)
+# Use CPU's only
+#
+#module load cuda/11.3
+#module load cudnn/8.1.0-cuda11.2 

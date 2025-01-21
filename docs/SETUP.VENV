@@ -10,8 +10,12 @@ pip install imagecodecs
 pip install tensorflow==2.8.0
 pip install matplotlib
 
-module load cuda/11.3
-module load cudnn/8.1.0-cuda11.2 
+#
+# GPU's on JUNO do not seem to work (crash)
+# Use CPU's only
+#
+#module load cuda/11.3
+#module load cudnn/8.1.0-cuda11.2 
 
 pip install deepcell
 

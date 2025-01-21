@@ -1,4 +1,4 @@
-# Cortana - The AI to replace Halo
+# Cortana - AI to replace Halo
 
-ML tools to process mpIF images
+ML tools to process mpIF images and create cell level tables
 
